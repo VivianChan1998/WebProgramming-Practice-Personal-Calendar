@@ -1,15 +1,20 @@
 var cells = document.getElementsByClassName("date")
 var input = document.getElementById("cal-input")
+input.value = ''
+var color = document.getElementById("cal-color")
+color.value = '#000000'
 var setText = document.getElementById("cal-setText")
 
 setText.addEventListener('click', () => {
     var sel = document.getElementsByClassName('selected')[0]
     if(sel.childElementCount){
         sel.children[0].textContent = input.value
+        sel.children[0].setAttribute('style', `color: ${color.value}`)
     }
     else{
-        var node = document.createElement("span")
+        var node = document.createElement("div")
         var text = document.createTextNode(input.value)
+        node.setAttribute('style', `color: ${color.value}`)
         node.appendChild(text)
         sel.appendChild(node)
     }
