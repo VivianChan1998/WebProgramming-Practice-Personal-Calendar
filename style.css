@@ -57,10 +57,10 @@ table {
 } 
 .date:not(.selected):hover{
     background: rgba(0, 0, 0, 0.103);
-    border-radius: 3px;
+    border-radius: 8px;
 }
 .selected{
     background: rgba(0, 0, 0, 0.884);
     color: white;
-    border-radius: 3px;
+    border-radius: 8px;
 }
