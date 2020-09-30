@@ -5,7 +5,10 @@ var button = document.getElementById("cal-button")
 input.value = ''
 color.value = '#b0b0b0'
 
-button.addEventListener('click', () => {
+button.addEventListener('click', setTextToCell, false)
+input.addEventListener('keydown', e => { if(e.key === "Enter") setTextToCell() }, false)
+
+function setTextToCell() {
     var sel = document.getElementsByClassName('selected')[0]
     if(sel.childElementCount){
         sel.children[0].textContent = input.value
@@ -18,7 +21,7 @@ button.addEventListener('click', () => {
         node.appendChild(text)
         sel.appendChild(node)
     }
-}, false)
+}
 
 for(var i=0; i < cells.length; ++i){
     cells[i].addEventListener('click', clickCell, false)
