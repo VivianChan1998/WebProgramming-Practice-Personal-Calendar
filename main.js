@@ -2,7 +2,7 @@ var cells = document.getElementsByClassName("date")
 var input = document.getElementById("cal-input")
 input.value = ''
 var color = document.getElementById("cal-color")
-color.value = '#000000'
+color.value = '#b0b0b0'
 var setText = document.getElementById("cal-setText")
 
 setText.addEventListener('click', () => {
@@ -31,4 +31,13 @@ function clickCell(e) {
     this.classList.add('selected');
     if(this.children.length) input.value = this.children[0].textContent
     else input.value = ''
+}
+
+
+var themeButton = document.getElementsByClassName("ChooseTheme")
+for(var i=0; i<themeButton.length; ++i) {
+    themeButton[i].addEventListener('click', e => {
+        var body = document.body
+        body.setAttribute('class', e.target.id)
+    }, false)
 }
