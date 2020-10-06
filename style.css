@@ -9,6 +9,7 @@ body{
     padding: 10%;
     height: 100vh;
     background: linear-gradient(rgba(var(--bg-0), 1), rgba(var(--bg-1), 1));
+    background-attachment: fixed;
 }
 table {
     table-layout: fixed ;
@@ -55,6 +56,7 @@ body > h1{
 .Cal-title-row > * {
     height: 5vh;
     text-align: center;
+    overflow: hidden;
 }
 .Cal-content-row > * {
     height: 15vh;
@@ -129,3 +131,7 @@ body > h1{
 #Theme-red{ background-color:rgba(215, 95, 93, 0.5); }
 #Theme-blue{ background-color: rgba(93, 215, 209, 0.5); }
 #Theme-purple{ background-color: rgba(49,46,140, 0.5); }
+
+#Theme-button{
+    margin-bottom: 5vh;
+}
